@@ -12,7 +12,7 @@ def main():
     # Initialize variables to store the closest GWA to 1.00 and the corresponding student
     closest_to_1 = float('inf')
     top_student = ""
-    
+
     # Loop through each line to find the student with the GWA closest to 1.00
     for line in lines:
         name, gwa = line.strip().split(",")
@@ -20,3 +20,9 @@ def main():
         if abs(gwa - 1.00) < abs(closest_to_1 - 1.00):
             closest_to_1 = gwa
             top_student = f"{name} (GWA: {gwa})"
+            
+    # Output the student with the GWA closest to 1.00
+    print("Top Student:", top_student)
+
+if __name__ == "__main__":
+    main()
