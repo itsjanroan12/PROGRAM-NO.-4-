@@ -19,3 +19,6 @@ def process_integers(input_file):
 
     with open('triple.txt', 'w') as f:
         f.write('\n'.join(map(str, odd_cubes)))
+
+# Call the method with the input file name
+process_integers('integers.txt')
