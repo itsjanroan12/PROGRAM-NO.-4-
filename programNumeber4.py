@@ -8,3 +8,11 @@ def process_integers(input_file):
     # Open the source file for reading
     with open(input_file, 'r') as f:
         integers = f.readlines()
+
+    # Process integers and create lists of squares and cubes
+    even_squares = [int(num) ** 2 for num in integers if int(num) % 2 == 0]
+    odd_cubes = [int(num) ** 3 for num in integers if int(num) % 2 != 0]
+
+    # Write results to output files
+    with open('double.txt', 'w') as f:
+        f.write('\n'.join(map(str, even_squares)))
