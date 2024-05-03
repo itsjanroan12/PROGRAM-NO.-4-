@@ -11,3 +11,12 @@ def main():
 
     # Convert strings to integers
     numbers = [int(num.strip()) for num in numbers]
+
+   # Separate even and odd numbers
+    even_numbers = [num for num in numbers if num % 2 == 0]
+    odd_numbers = [num for num in numbers if num % 2 != 0]
+
+    # Write even numbers to even.txt
+    with open("even.txt", "w") as even_file:
+        for num in even_numbers:
+            even_file.write(str(num) + "\n")
