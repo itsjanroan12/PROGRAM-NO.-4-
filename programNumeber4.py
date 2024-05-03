@@ -16,3 +16,10 @@ def process_integers(input_file):
     # Write results to output files
     with open('double.txt', 'w') as f:
         f.write('\n'.join(map(str, even_squares)))
+
+        
+    with open('triple.txt', 'w') as f:
+        f.write('\n'.join(map(str, odd_cubes)))
+
+# Call the method with the input file name
+process_integers('integers.txt')
