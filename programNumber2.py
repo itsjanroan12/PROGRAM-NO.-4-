@@ -24,3 +24,9 @@ def main():
         if abs(gwa - 1.00) < abs(closest_to_1 - 1.00):
             closest_to_1 = gwa
             top_student = f"{name} (GWA: {gwa})"
+
+    # Output the student with the GWA closest to 1.00
+    print("Top Student:", top_student)
+
+if __name__ == "__main__":
+    main()
